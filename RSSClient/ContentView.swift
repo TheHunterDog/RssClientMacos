@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct ContentView: View {
-    @State var store: RssStore = RssStore(RssArray: [RSS(url: URL(string: "https://feeds.nos.nl/nosnieuwsalgemeen")!, updatedAt: Date(), createdAt: Date())])
+    @StateObject var store: RssStore = RssStore(RssArray: [RSS(url: URL(string: "https://feeds.nos.nl/nosnieuwsalgemeen")!, updatedAt: Date(), createdAt: Date())])
     @State var updated_At: Date = Date()
     @State var news: [RssItem] = []
-    @State var Selected: RSS?;
+    @State var Selected: RSS? ;
+    @State var sel: Bool = false
     
     init() {
         print("Start")
@@ -19,34 +21,42 @@ struct ContentView: View {
         self.store.num+=1
     }
     
+
     var body: some View {
-        Text(String(store.num))
+//        Text(String(store.num))
         NavigationSplitView{
             List(store.rssArray, selection: $Selected) { item in
                 NavigationLink(item.getName(), value: item)
             }.buttonStyle(BorderlessButtonStyle())
-
-        }
-        detail:{
-            if(Selected != nil){
-                Text(Selected!.getName())
-                Text(String(Selected!.done))
-                List(news){item in
-                    Text(item.title)
-                }
-            }
-        }
-        .onChange(of: Selected){ newvalue in
-            if(newvalue!.body == nil || newvalue?.body.count == 0){
-                newvalue!.fetch(){data in
-                    news = data!
-                }
-            }
-            else{
-                news = newvalue!.body
-            }
             
         }
+    detail:{
+        if let select = Selected {
+//            Text(select.getName())
+//            Text(String(select.done))
+            List(news){item in
+                Text(item.title)
+                //                    Text(item.description)
+//                HTMLView(htmlString: item.description)
+//                    .frame(minWidth: 0, idealWidth: 300, maxWidth: .infinity, minHeight: 0, idealHeight: 300, maxHeight: .infinity)
+//                    .padding()
+                Text(item.description)
+            }
+            Spacer()
+        }
+    }
+    .onChange(of: Selected){ newvalue in
+        if let selected = newvalue {
+            if selected.body.isEmpty {
+                selected.fetch(){data in
+                    news = data!
+                }
+            } else {
+                news = selected.body
+            }
+        }
+        
+    }
     }
 }
 

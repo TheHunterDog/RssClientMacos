@@ -11,6 +11,7 @@ struct RssItem: Identifiable{
     let id = UUID()
     var title:String
     var description:String
+    var Image:String?
     
     init(title: String, description: String) {
         self.title = title

@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Network
 
 class RSS:NSObject ,Identifiable,ObservableObject {
     let id = UUID()
@@ -14,18 +15,23 @@ class RSS:NSObject ,Identifiable,ObservableObject {
     var name: String?;
     var updatedAt: Date;
     var createdAt: Date;
-    @Published var body: [RssItem];
+    @Published var body: [RssItem] = []{
+        didSet{
+            print("body Updated")
+            objectWillChange.send()
+        }
+    }
     var xmlDict = [String: Any]()
     var xmlDictArr = [[String: Any]]()
     var currentElement = ""
     @Published var done = false;
+    let monitor = NWPathMonitor()
     
     init(url: URL, updatedAt: Date, createdAt: Date, Name: String) {
         self.url = url
         self.updatedAt = updatedAt
         self.createdAt = createdAt
         self.name = Name
-        self.body = []
     }
     
     convenience init(url: URL, updatedAt: Date, createdAt: Date) {
@@ -41,7 +47,7 @@ class RSS:NSObject ,Identifiable,ObservableObject {
                 let parser = XMLParser(data: data)
                 parser.delegate = self
                 parser.parse()
-
+                self.updatedAt = Date()
                 completion(self.body)
             } else {
                 completion(nil)
@@ -50,15 +56,17 @@ class RSS:NSObject ,Identifiable,ObservableObject {
         task.resume()
     }
     
-    func fetchData() {
-        fetch { result in
+    func fetchData(for rss: RSS) {
+        rss.fetch { result in
             DispatchQueue.main.async {
-                self.body = result!
-                self.done = true
-                print("63")
+                if let result = result {
+                    rss.body = result
+                }
+                rss.done = true
             }
         }
     }
+
     
     func getName() -> String {
         return name!
