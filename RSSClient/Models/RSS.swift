@@ -25,8 +25,10 @@ class RSS:NSObject ,Identifiable,ObservableObject {
     var xmlDictArr = [[String: Any]]()
     var currentElement = ""
     @Published var done = false;
-    let monitor = NWPathMonitor()
-    
+    var HasConnection = false;
+    let monitor = NWPathMonitor(requiredInterfaceType: .wifi)
+    let queue = DispatchQueue.global(qos: .background)
+
     init(url: URL, updatedAt: Date, createdAt: Date, Name: String) {
         self.url = url
         self.updatedAt = updatedAt
@@ -35,13 +37,31 @@ class RSS:NSObject ,Identifiable,ObservableObject {
     }
     
     convenience init(url: URL, updatedAt: Date, createdAt: Date) {
-        self.init(url: url, updatedAt: updatedAt, createdAt: createdAt, Name: url.host() ?? "Unknown")
+        self.init(url: url, updatedAt: updatedAt, createdAt: createdAt, Name: url.host ?? "Unknown")
     }
-
+    func setupMonitor(){
+        monitor.start(queue: queue)
+        monitor.pathUpdateHandler = { [self] path in
+            if path.status == .satisfied {
+                print("Connected")
+                HasConnection = true
+            }
+            else if(path.status == .unsatisfied){
+                print("NO ACCESS")
+                HasConnection = false
+            }
+        }
+    }
     // Conforming to ObservableObject requires a class-level objectWillChange Publisher
 //    let objectWillChange = ObservableObjectPublisher()
     
     func fetch(completion: @escaping ([RssItem]?) -> Void) {
+        //TODO: Move monitor
+        self.setupMonitor()
+        if(!HasConnection)
+        {
+            completion([RssItem(title: "[BREAKING] No internet", description: "*Breaking news*: You got no internet access")])
+        }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data, let _ = String(data: data, encoding: .utf8) {
                 let parser = XMLParser(data: data)
