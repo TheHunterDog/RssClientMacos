@@ -9,7 +9,7 @@ import SwiftUI
 import WebKit
 import Network
 struct ContentView: View {
-    @StateObject var store: RssStore = RssStore(RssArray: [RSS(url: URL(string: "https://feeds.nos.nl/nosnieuwsalgemeen")!, updatedAt: Date(), createdAt: Date())])
+    @StateObject var store: RssStore = RssStore()
     @State var updated_At: Date = Date()
     @State var news: [RssItem] = []
     @State var Selected: RSS? ;
@@ -20,7 +20,7 @@ struct ContentView: View {
     
     init() {
         print("Start")
-        store.addRss(Rss: RSS(url: URL(string: "https://feeds.nos.nl/nosnieuwsalgemeen")!, updatedAt: Date(), createdAt: Date()))
+//        store.addRss(Rss: RSS(url: URL(string: "https://feeds.nos.nl/nosnieuwsalgemeen")!, updatedAt: Date(), createdAt: Date()))
         self.store.num+=1
         
                 
@@ -42,7 +42,7 @@ struct ContentView: View {
                     Image(systemName: "plus")
                 }
 
-            }.alert("Login", isPresented: $presentAlert, actions: {
+            }.alert("Add an RSS feed", isPresented: $presentAlert, actions: {
                 TextField("RssUrl", text: $rssUrl)
 
                 
@@ -66,10 +66,15 @@ struct ContentView: View {
         if Selected != nil{
             if !news.isEmpty {
                 List(news){item in
-                    Text(item.title)
+                    Text(item.title).bold()
+                    Text(item.publishDate)
+                    if let image = item.Image, !image.isEmpty{
+                        AsyncImage(url: URL(string: image))
+                    }
                     HTMLView(html: item.description)
                 }
                 Spacer()
+                Divider()
             }
             else{
                 ProgressView()
@@ -79,7 +84,7 @@ struct ContentView: View {
     .onChange(of: Selected){ newvalue in
         if let selected = newvalue {
             news = []
-            if selected.body.isEmpty {
+            if selected.body.isEmpty || (Date().timeIntervalSinceReferenceDate - selected.updatedAt.timeIntervalSinceReferenceDate) > 2*60 {
                 selected.fetch(){data in
                     if((data) != nil){
                         news = data!
