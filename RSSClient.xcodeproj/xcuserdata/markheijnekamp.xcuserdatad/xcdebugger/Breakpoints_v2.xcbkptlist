@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "48C82093-9F11-4D9A-A584-CF81BB1F2F27"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "91F4B7E9-E988-41D6-88FE-8B31353B0312"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSClient/Models/RssStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB6568CE-3BB4-40F8-9113-5BD39BF68EA9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSClient/Models/RssStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "RssStore"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40068789-A450-4AA8-AE11-6A1BDFD77B46"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSClient/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "40068789-A450-4AA8-AE11-6A1BDFD77B46 - 22cfe673cb091f69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; Swift.Optional&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;RSSClient.RssItem&gt;, Foundation.UUID, SwiftUI.Text&gt;&gt;)&gt;&gt; in RSSClient.ContentView.body.getter : some"
+                  moduleName = "RSSClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markheijnekamp/RSSClient/RSSClient/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "1746">
+               </Location>
+               <Location
+                  uuid = "40068789-A450-4AA8-AE11-6A1BDFD77B46 - 9ef585fde1ce77e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RSSClient.RssItem) -&gt; SwiftUI.Text in closure #2 () -&gt; Swift.Optional&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;RSSClient.RssItem&gt;, Foundation.UUID, SwiftUI.Text&gt;&gt;)&gt;&gt; in RSSClient.ContentView.body.getter : some"
+                  moduleName = "RSSClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markheijnekamp/RSSClient/RSSClient/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "54">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A40DF6D-19DF-48BD-9737-287D376EB86A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSClient/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "731BFD88-C99B-427C-9DCE-31125D1F26F5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSClient/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "731BFD88-C99B-427C-9DCE-31125D1F26F5 - f266c325d22d4fc8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.Optional&lt;RSSClient.RSS&gt;) -&gt; () in RSSClient.ContentView.body.getter : some"
+                  moduleName = "RSSClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markheijnekamp/RSSClient/RSSClient/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "731BFD88-C99B-427C-9DCE-31125D1F26F5 - f266c325d22d4fc8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.Optional&lt;RSSClient.RSS&gt;) -&gt; () in RSSClient.ContentView.body.getter : some"
+                  moduleName = "RSSClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markheijnekamp/RSSClient/RSSClient/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "142">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B273562A-D5EF-4AD8-B50D-C1ADDD04C6FE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSClient/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0165BD38-C71F-4091-90C7-6926402DF73A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSClient/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "0165BD38-C71F-4091-90C7-6926402DF73A - 23e5cd1a05f7715c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RSSClient.RssItem) -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, Swift.Optional&lt;SwiftUI.AsyncImage&lt;SwiftUI.Image&gt;&gt;, RSSClient.HTMLView)&gt; in closure #2 () -&gt; Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.TupleView&lt;(SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;RSSClient.RssItem&gt;, Foundation.UUID, SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, Swift.Optional&lt;SwiftUI.AsyncImage&lt;SwiftUI.Image&gt;&gt;, RSSClient.HTMLView)&gt;&gt;&gt;, SwiftUI.Spacer)&gt;, SwiftUI.ProgressView&lt;SwiftUI.EmptyView, SwiftUI.EmptyView&gt;&gt;&gt; in RSSClient.ContentView.body.getter : some"
+                  moduleName = "RSSClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markheijnekamp/RSSClient/RSSClient/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "1337">
+               </Location>
+               <Location
+                  uuid = "0165BD38-C71F-4091-90C7-6926402DF73A - 23e5cd1a05f7715c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RSSClient.RssItem) -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, Swift.Optional&lt;SwiftUI.AsyncImage&lt;SwiftUI.Image&gt;&gt;, RSSClient.HTMLView)&gt; in closure #2 () -&gt; Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.TupleView&lt;(SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;RSSClient.RssItem&gt;, Foundation.UUID, SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, Swift.Optional&lt;SwiftUI.AsyncImage&lt;SwiftUI.Image&gt;&gt;, RSSClient.HTMLView)&gt;&gt;&gt;, SwiftUI.Spacer)&gt;, SwiftUI.ProgressView&lt;SwiftUI.EmptyView, SwiftUI.EmptyView&gt;&gt;&gt; in RSSClient.ContentView.body.getter : some"
+                  moduleName = "RSSClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markheijnekamp/RSSClient/RSSClient/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "1660">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7FD482F-5D7B-4BA7-BA67-EAB9F1BB47A5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSClient/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3E75D32-29E9-496A-93F0-348137A7CFEB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSClient/Models/RssStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "fetchRss()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C3E75D32-29E9-496A-93F0-348137A7CFEB - 5e64f4643a975f2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RSSClient.RssStore.fetchRss() -&gt; Swift.Array&lt;RSSClient.RSS&gt;"
+                  moduleName = "RSSClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markheijnekamp/RSSClient/RSSClient/Models/RssStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "91">
+               </Location>
+               <Location
+                  uuid = "C3E75D32-29E9-496A-93F0-348137A7CFEB - 5e64f4643a975f2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RSSClient.RssStore.fetchRss() -&gt; Swift.Array&lt;RSSClient.RSS&gt;"
+                  moduleName = "RSSClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markheijnekamp/RSSClient/RSSClient/Models/RssStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "291">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D5EB2B22-1EF4-490E-93D0-2DDAD75ED84F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSClient/Models/RssStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "saveRss()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73500CE3-87D2-498E-A397-2324F46468F7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSClient/Models/RssStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "fetchRss()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
